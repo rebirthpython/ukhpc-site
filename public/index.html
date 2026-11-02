@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Polytech Navigator — студенческий портал УКВПК</title>
+<meta name="description" content="Студенческий портал УКВПК: личный кабинет, электронный дневник, расписание, заказ справок и новости колледжа.">
+<meta name="theme-color" content="#0b1f36">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/theme.js"></script>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="wrap">
+    <nav class="topnav" aria-label="Основная навигация">
+      <a class="logo" href="/">
+        <span class="logo-mark"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5-5 2 2-5z"/></svg></span>
+        <span>Polytech Navigator<small>Студенческий портал УКВПК</small></span>
+      </a>
+      <span class="links" style="display:contents">
+        <a href="#features">Возможности</a>
+        <a href="#news">Новости</a>
+        <a href="#bells">Звонки</a>
+        <a href="https://t.me/UKHPC_news_bot" target="_blank" rel="noopener">Телеграм-бот</a>
+      </span>
+      <a class="btn glass" href="/cabinet" data-cabinet-link>Войти</a>
+    </nav>
+
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Учебный год <span data-year></span></span>
+        <h1>Весь колледж — <span>в одном кабинете</span></h1>
+        <p class="lead">Электронный дневник, оценки и посещаемость, расписание пар, домашние задания и заказ справок онлайн. Для студентов, преподавателей и учебной части.</p>
+        <div class="actions">
+          <a class="btn mint" href="/cabinet" data-cabinet-link>Войти в личный кабинет</a>
+          <a class="btn glass" href="#features">Что умеет портал</a>
+        </div>
+      </div>
+      <div class="photo-card">
+        <img src="/img/college.jpg" alt="Учебный корпус колледжа" width="1000" height="298">
+        <div class="float-card fc1">
+          <span class="mark m5">5</span>
+          <span><b>Программирование</b>новая оценка в дневнике</span>
+        </div>
+        <div class="float-card fc2">
+          <svg class="icon" viewBox="0 0 24 24" style="color:var(--ocean)"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+          <span><b data-next-pair>Расписание</b><span data-next-pair-sub>на сегодня</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section" id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Возможности портала</h2>
+        <p>Один вход — и все академические сервисы колледжа под рукой, с компьютера или телефона.</p>
+      </div>
+      <div class="grid three">
+        <article class="card feature">
+          <span class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2v-.5zM19 19v3H6"/><path d="M9 7h6M9 11h4"/></svg></span>
+          <h3>Электронный дневник</h3>
+          <p>Пары на неделю, темы занятий, домашние задания и оценки — сразу после того, как преподаватель заполнил журнал.</p>
+        </article>
+        <article class="card feature">
+          <span class="ic mint"><svg class="icon" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+          <h3>Успеваемость и посещаемость</h3>
+          <p>Средний балл по каждому предмету, все оценки за семестр и количество пропусков.</p>
+        </article>
+        <article class="card feature">
+          <span class="ic violet"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span>
+          <h3>Расписание</h3>
+          <p>Актуальное расписание группы с аудиториями и преподавателями, текущая пара подсвечивается.</p>
+        </article>
+        <article class="card feature">
+          <span class="ic amber"><svg class="icon" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 14h6M9 18h4"/></svg></span>
+          <h3>Справки онлайн</h3>
+          <p>Закажите справку с места учёбы, в военкомат или о стипендии — и следите за статусом заявки.</p>
+        </article>
+        <article class="card feature">
+          <span class="ic"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></span>
+          <h3>Журнал преподавателя</h3>
+          <p>Удобная сетка оценок с клавиатурным вводом, темы и домашние задания, замечания и благодарности.</p>
+        </article>
+        <article class="card feature">
+          <span class="ic mint"><svg class="icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <h3>Учебная часть</h3>
+          <p>Пользователи, группы, нагрузка преподавателей, расписание, заявки на справки и новости — в одной панели.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="news" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Новости колледжа</h2>
+        <a class="btn ghost sm" href="https://t.me/UKHPC_news_bot" target="_blank" rel="noopener">Новости в Telegram</a>
+      </div>
+      <div class="grid three" data-news><div class="loader"></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="bells" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Расписание звонков</h2>
+        <p>Продолжительность пары — 80 минут.</p>
+      </div>
+      <div class="bells" data-bells></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta">
+        <div class="blob b1" style="opacity:.5"></div>
+        <div>
+          <h2>Логин и пароль выдаёт учебная часть</h2>
+          <p>Если вы забыли пароль — обратитесь к куратору группы или в учебную часть, вам сбросят его.</p>
+        </div>
+        <a class="btn mint" href="/cabinet" data-cabinet-link>Перейти в кабинет</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© <span data-year-now></span> УКВПК · Polytech Navigator</span>
+    <a href="https://t.me/UKHPC_news_bot" target="_blank" rel="noopener">Телеграм-бот новостей</a>
+  </div>
+</footer>
+
+<script src="/js/landing.js"></script>
+</body>
+</html>
