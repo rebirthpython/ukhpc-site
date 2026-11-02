@@ -1,0 +1,7 @@
+.env
+data/
+persona.txt
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/

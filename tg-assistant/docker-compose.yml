@@ -1,0 +1,29 @@
+services:
+  bot:
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    volumes:
+      - bot_data:/srv/data
+    expose:
+      - "8080"
+
+  # HTTPS для мини-приложения: Caddy сам получит сертификат Let's Encrypt для DOMAIN
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    depends_on: [bot]
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DOMAIN: ${DOMAIN}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  bot_data:
+  caddy_data:
+  caddy_config:
