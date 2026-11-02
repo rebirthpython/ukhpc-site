@@ -1,0 +1,24 @@
+# Blueprint для Render (https://render.com): New → Blueprint → выбрать репозиторий.
+services:
+  - type: web
+    name: polytech-navigator
+    runtime: node
+    plan: free            # для настоящей работы: plan: starter + диск ниже
+    buildCommand: "true"  # зависимостей нет
+    startCommand: npm start
+    healthCheckPath: /api/config
+    envVars:
+      - key: NODE_VERSION
+        value: 22.14.0
+      - key: COOKIE_SECURE
+        value: "1"
+      - key: TRUST_PROXY
+        value: "1"
+      # Демо-режим: кнопки быстрого входа и демо-данные. Для боевого запуска поставьте "0".
+      - key: DEMO
+        value: "1"
+    # disk:                       # постоянное хранилище базы (платный тариф)
+    #   name: data
+    #   mountPath: /var/data
+    #   sizeGB: 1
+    # и добавьте переменную DB_PATH=/var/data/portal.db

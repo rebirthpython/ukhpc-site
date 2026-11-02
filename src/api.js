@@ -670,7 +670,7 @@ async function handle(req, res, url) {
     const m = url.pathname.match(r.re);
     r.keys.forEach((k, i) => (params[k] = Number(m[i + 1])));
     const body = req.method === 'GET' ? {} : await readJson(req);
-    const ip = req.socket.remoteAddress || '';
+    const ip = (process.env.TRUST_PROXY === '1' && String(req.headers['x-forwarded-for'] || '').split(',')[0].trim()) || req.socket.remoteAddress || '';
     const result = await r.handler({
       req, user, params, body, query: url.searchParams, ip,
       setCookie: (c) => (headers['Set-Cookie'] = c),
