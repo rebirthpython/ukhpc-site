@@ -1,7 +1,0 @@
-{$DOMAIN} {
-	encode gzip
-	reverse_proxy bot:8080 {
-		# ответы стримятся — отдаём клиенту сразу, без буферизации
-		flush_interval -1
-	}
-}

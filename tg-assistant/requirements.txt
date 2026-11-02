@@ -1,4 +1,0 @@
-anthropic>=2.3.0,<3
-aiogram>=3.31,<4
-aiohttp>=3.10
-python-dotenv>=1.0
